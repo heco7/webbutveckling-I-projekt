@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Järntemplet | Contact</title>
+  </head>
+  <body>
+    <!-- Page wrapper -->
+    <div class="wrapper">
+      <header>
+        <!-- Brand Logo -->
+        <div class="brand-logo">
+          <a href="index.html"
+            ><img
+              src="../images/logo-final.png"
+              alt="Järntemplet Homepage"
+              class="logo"
+          /></a>
+        </div>
+
+        <!-- List with Website Navigation Links -->
+        <nav>
+          <ul class="nav-links">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="contact.html" id="active">Contact</a></li>
+            <li><a href="../sv/index.html">Svenska</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- Main content -->
+      <main>
+        <div id="page-title">
+          <h1>Contact</h1>
+        </div>
+        <div class="flex-container">
+          <!-- Contact Information -->
+          <div class="contactinfo">
+            <div>
+              <h2>Questions and feedback</h2>
+              <p>
+                Do you have a question or any feedback regarding how we can make
+                our website better? Fill in the form below or contact us by
+                email or telephone.
+              </p>
+            </div>
+            <div>
+              <h2>Contact information</h2>
+              <p>Telephone: XXX-XXX XX XX</p>
+              <p>Email: user@example.com</p>
+            </div>
+          </div>
+          <!-- Web Form -->
+          <form
+            action="#"
+            id="contactform"
+            onSubmit="alert('Form submitted. Thank you for your feedback!\n\nFor any questions we will contact you back as soon as possible.');"
+          >
+            <p>* means mandatory field</p>
+            <div>
+              <label for="name">Name: *</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                autofocus
+                required
+              />
+            </div>
+            <div>
+              <label for="email">Email: *</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email address"
+                required
+              />
+            </div>
+            <div>
+              <label for="tel">Telephone number:</label>
+              <!-- Phone regex for mobile numbers -->
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                pattern="((\+46)[0-9]{9}||07[0-9]{8})"
+                placeholder="Telephone number"
+              />
+            </div>
+            <div>
+              <label for="subject">Subject: *</label>
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="Subject"
+                required
+              />
+            </div>
+            <div>
+              <label for="message">Message: *</label>
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Write your message here"
+                required
+              ></textarea>
+            </div>
+            <input type="submit" value="Submit" id="submitbutton" />
+          </form>
+        </div>
+      </main>
+      <!-- Footer -->
+      <footer>
+        <a href="#" id="footer-link">To the top</a>
+        <p id="footer-contact">Contact: XXX-XXXXXX</p>
+        <p id="copyright">&copy; Copyright Information 2020</p>
+      </footer>
+    </div>
+  </body>
+</html>

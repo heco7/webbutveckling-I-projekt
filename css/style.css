@@ -1,0 +1,434 @@
+/* Import Montserrat font from Google Fonts API */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+/* Default settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+/* Page wrapper */
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+  background-color: #fff;
+}
+body {
+  background-color: #88a3b42f;
+}
+/* Headings */
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+/* Header and Navbar */
+/* Header is a flex container in a row direction and will wrap items if items collide. Items are also aligned to the center */
+header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  background-color: #1b262c;
+}
+/* Site logo uses remaining container space as right margin */
+.brand-logo {
+  margin-right: auto;
+}
+.brand-logo a {
+  padding-left: 15px;
+}
+/* Turn navigation list into flex container */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+/* Remove default list style */
+.nav-links li a {
+  display: block;
+  padding: 15px 10px;
+  text-decoration: none;
+  color: #f1f1f1;
+  /* Animation, transitions in 0.3sec without delay */
+  transition: all 0.3s ease 0s;
+}
+/* Change background color on hover or for current page */
+.nav-links li a:hover,
+#active {
+  background-color: #10161a;
+}
+/* Main content */
+/* Page title with linear-gradient background colors */
+#page-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: #1b262c; */
+  background: linear-gradient(#1b262c, #0b0e11);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 35vh;
+  width: 100%;
+}
+/* Page title heading */
+#page-title h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.95);
+}
+/* Page title subheading */
+#page-title p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+}
+/* Rows and columns for layout */
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.col-1,
+.col-2 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+/* Column 1 takes up more space */
+.col-1 {
+  flex: 60%;
+}
+.col-2 {
+  flex: 40%;
+  justify-content: space-between;
+}
+/* Every child div element takes up even space with flex: 1*/
+.col-1 > div {
+  margin-left: 2%;
+  flex: 1;
+}
+.col-1 p {
+  margin: 1rem 0;
+  width: 90%;
+}
+/* Only apply to first div children */
+.col-2 > div {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+/* Image on home page */
+#homepageimage {
+  display: block;
+  width: 100%;
+}
+/* Öppettider Table */
+#openinghours-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+/* Table has rounded corners */
+#openinghours {
+  padding: 2rem 1rem;
+  margin-bottom: 3rem;
+  border: 2px solid #3282b8;
+  border-radius: 5px;
+}
+#openinghours p {
+  padding-bottom: 15px;
+}
+/* Border collapse to make borders look seamless */
+#openinghours table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#openinghours table caption {
+  text-align: left;
+  margin: 0.7rem 0;
+}
+#openinghours table th {
+  text-align: left;
+  font-weight: 700;
+}
+#openinghours table td,
+#openinghours table th {
+  width: 50%;
+  border-bottom: 1px solid #ccc;
+  padding: 4px 0;
+}
+/* Bli Medlem Box */
+.blimedlem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f4c75;
+  height: 15rem;
+}
+/* Bli Medlem Box Link */
+.blimedlem a {
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  background-color: #0f4c75;
+  padding: 15px;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease 0s;
+}
+/* Change Box Link on Hover */
+.blimedlem a:hover {
+  color: #000;
+  background-color: #fff;
+}
+/* Embedded Google Maps */
+.googlemaps {
+  margin-top: 3rem;
+}
+#map {
+  display: block;
+  width: 100%;
+  height: 15rem;
+  border: none;
+}
+/* Container for paragraphs */
+.stycke {
+  width: 85%;
+  margin: 0 auto 1.2rem;
+}
+.stycke p {
+  margin-top: 1rem;
+}
+/* Generic flex container with centralized content as a column*/
+.flex-container {
+  width: 90%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#membership-image {
+  display: block;
+  width: 85%;
+  margin: 0 auto 1.2rem;
+}
+/* Gallery images */
+.gallery-image {
+  margin: 10%;
+}
+.gallery-image img {
+  max-width: 100%;
+  min-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+}
+/* Center gallery image descriptions */
+.gallery-image p {
+  text-align: center;
+}
+/* Price tables */
+#price-title {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.prices {
+  width: 100%;
+  margin: 2.5rem 0;
+}
+/* Border styling */
+.prices caption {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.prices,
+.prices tr th,
+.prices tr td {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-collapse: collapse;
+}
+.prices tr th,
+.prices tr td {
+  padding: 0.5rem;
+}
+.prices tr th {
+  text-align: left;
+}
+.prices th {
+  height: 3rem;
+  background-color: #0f4c75;
+  color: #f1f1f1;
+}
+/* Even children rows are colored for the zebra stripe look */
+.prices tr:nth-child(odd) {
+  background-color: #bbe1fa;
+}
+/* Rows and Columns for Booking Page */
+.booking-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  width: 85%;
+}
+.booking-row .column {
+  width: 47%;
+}
+/* Group Training Information and Images */
+.booking-row .column img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.booking-row .column h2 {
+  margin: 1rem 0;
+  text-align: center;
+}
+.booking-row .column .activity-info {
+  margin: 1rem 0;
+}
+/* Contact information */
+.contactinfo {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contactinfo div {
+  margin-bottom: 2rem;
+  width: 40%;
+}
+.contactinfo div h2 {
+  margin-bottom: 1rem;
+}
+/* Contact form */
+#contactform {
+  width: 90%;
+  margin-bottom: 2rem;
+}
+#contactform div {
+  margin: 1rem 0;
+}
+#contactform div input,
+#contactform div textarea {
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  padding: 1.3rem 0.5rem;
+  width: 100%;
+  border-radius: 4px;
+}
+#contactform div textarea {
+  padding: 0.8rem 0.5rem;
+  height: 12rem;
+  resize: none;
+}
+#contactform div input {
+  height: 1.5rem;
+}
+/* Submit Button */
+#submitbutton {
+  font-size: 1.05rem;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 4px #888888;
+  transition: all 0.1s ease 0s;
+}
+#submitbutton:hover {
+  cursor: pointer;
+  border: 1px solid #0f4c75;
+  background-color: #0f4c75;
+  color: white;
+}
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #1b262c;
+  color: white;
+  text-align: right;
+  height: 3rem;
+}
+#copyright {
+  margin-left: 15px;
+}
+#footer-link {
+  text-decoration: none;
+  color: white;
+  margin-right: 15px;
+}
+#footer-link:hover {
+  text-decoration: underline;
+}
+/* Media queries for smaller screens */
+@media screen and (max-width: 800px) {
+  header {
+    flex-direction: column;
+  }
+  .brand-logo {
+    margin: 0 auto;
+  }
+  .col-1,
+  .col-2 {
+    flex: 100%;
+    align-items: center;
+  }
+  .col-1 div {
+    width: 75%;
+  }
+  #openhours {
+    width: 75%;
+  }
+  .col-2 h1 {
+    text-align: left;
+  }
+  #homepageimage {
+    display: none;
+  }
+  #page-title h1 {
+    font-size: 3rem;
+  }
+  .blimedlem {
+    display: none;
+  }
+  .googlemaps {
+    width: 75%;
+    margin-left: 2%;
+  }
+  .booking-row {
+    flex-direction: column;
+  }
+  .booking-row .column {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}
+/* Even smaller screen (smartphone) */
+@media screen and (max-width: 600px) {
+  nav {
+    width: 100%;
+  }
+  .nav-links {
+    flex-direction: column;
+  }
+  .nav-links a {
+    text-align: center;
+  }
+  #page-title {
+    height: 25vh;
+  }
+  #page-title h1 {
+    font-size: 2.5rem;
+  }
+  .contactinfo div {
+    width: 100%;
+  }
+  #footer-contact {
+    display: none;
+  }
+}

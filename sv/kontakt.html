@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Järntemplet | Kontakt</title>
+  </head>
+  <body>
+    <!-- Page wrapper -->
+    <div class="wrapper">
+      <header>
+        <!-- Brand Logo -->
+        <div class="brand-logo">
+          <a href="index.html"
+            ><img
+              src="../images/logo-final.png"
+              alt="Järntemplets Startsida"
+              class="logo"
+          /></a>
+        </div>
+
+        <!-- List with Website Navigation Links -->
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="omoss.html">Om oss</a></li>
+            <li>
+              <a href="medlem.html">Bli medlem</a>
+            </li>
+            <li><a href="galleri.html">Galleri</a></li>
+            <li><a href="boka.html">Boka</a></li>
+            <li><a href="kontakt.html" id="active">Kontakt</a></li>
+            <li><a href="../en/index.html">English</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- Main content -->
+      <main>
+        <div id="page-title">
+          <h1>Kontakt</h1>
+        </div>
+        <div class="flex-container">
+          <!-- Contact Information -->
+          <div class="contactinfo">
+            <div>
+              <h2>Frågor och feedback</h2>
+              <p>
+                Har du någon fråga eller synpunkter på hur vi kan förbättra
+                sidan? Fyll i formuläret nedanför eller kontakta oss via mail
+                eller telefon.
+              </p>
+            </div>
+            <div>
+              <h2>Kontakta oss</h2>
+              <p>Telefon: XXX-XXX XX XX</p>
+              <p>Epost: user@example.com</p>
+            </div>
+          </div>
+          <!-- Web Form -->
+          <form
+            action="#"
+            id="contactform"
+            onSubmit="alert('Formulär inskickat. Tack för din feedback!\n\nVid frågor återkommer vi så snart som möjligt.');"
+          >
+            <p>* anger obligatoriska fält</p>
+            <div>
+              <label for="name">Namn: *</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Namn"
+                autofocus
+                required
+              />
+            </div>
+            <div>
+              <label for="email">Epost: *</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Epostadress"
+                required
+              />
+            </div>
+            <div>
+              <label for="tel">Tel. nr:</label>
+              <!-- Phone regex for mobile numbers -->
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                pattern="((\+46)[0-9]{9}||07[0-9]{8})"
+                placeholder="Telefonnummer"
+              />
+            </div>
+            <div>
+              <label for="subject">Ämne: *</label>
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="Ämne"
+                required
+              />
+            </div>
+            <div>
+              <label for="message">Meddelande: *</label>
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Skriv ditt meddelande här"
+                required
+              ></textarea>
+            </div>
+            <input type="submit" value="Skicka" id="submitbutton" />
+          </form>
+        </div>
+      </main>
+      <!-- Footer -->
+      <footer>
+        <a href="#" id="footer-link">Till toppen</a>
+        <p id="footer-contact">Kontakt: XXX-XXXXXX</p>
+        <p id="copyright">&copy; Copyright Information 2020</p>
+      </footer>
+    </div>
+  </body>
+</html>
